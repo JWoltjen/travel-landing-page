@@ -4,8 +4,10 @@ import tw from 'twin.macro'
 import Logo from '../components/Logo'
 import {Link} from 'react-scroll'
 import {useMediaQuery} from 'react-responsive'
-import deviceSize from '../components/Responsive'
+import {deviceSize} from '../components/Responsive'
 import {slide as Menu} from 'react-burger-menu'
+import menuStyles from '../components/menuStyles'
+
 
 const Container = styled.div`
     ${tw`
@@ -70,7 +72,7 @@ export function Navbar() {
 
     return <Container>
         <Logo />
-        {isMobile && <Menu right>
+        {isMobile && <Menu right styles={menuStyles}>
             {navItems}
         </Menu>}
         {!isMobile && navItems}
