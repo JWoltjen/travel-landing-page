@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import Logo from '../components/Logo'
 import {Link} from 'react-scroll'
+import {useMediaQuery} from 'react-responsive'
+import deviceSize from '../components/Responsive'
 
 const Container = styled.div`
     ${tw`
@@ -51,7 +53,7 @@ const NavItem = tw.li`
 
 export function Navbar() {
 
-    const isMObile = useMediaQuery({maxWidth: })
+    const isMObile = useMediaQuery({maxWidth: deviceSize.mobile })
 
     const navItems = <NavItems>
         <NavItem>
