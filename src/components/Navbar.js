@@ -5,6 +5,7 @@ import Logo from '../components/Logo'
 import {Link} from 'react-scroll'
 import {useMediaQuery} from 'react-responsive'
 import deviceSize from '../components/Responsive'
+import {slide as Menu} from 'react-burger-menu'
 
 const Container = styled.div`
     ${tw`
@@ -53,7 +54,7 @@ const NavItem = tw.li`
 
 export function Navbar() {
 
-    const isMObile = useMediaQuery({maxWidth: deviceSize.mobile })
+    const isMobile = useMediaQuery({maxWidth: deviceSize.mobile })
 
     const navItems = <NavItems>
         <NavItem>
@@ -69,5 +70,9 @@ export function Navbar() {
 
     return <Container>
         <Logo />
+        {isMobile && <Menu right>
+            {navItems}
+        </Menu>}
+        {!isMobile && navItems}
     </Container>
 }
