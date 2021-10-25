@@ -51,6 +51,8 @@ const NavItem = tw.li`
 
 export function Navbar() {
 
+    const isMObile = useMediaQuery({maxWidth: })
+
     const navItems = <NavItems>
         <NavItem>
             <Link to="Home">Home</Link>
