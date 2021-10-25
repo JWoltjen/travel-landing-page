@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import tw from "twin.macro"
+import { TopSection } from './containers/homepage';
 
+
+const AppContainer = tw.div`
+  flex
+  w-full
+  h-full
+`
 function App() {
-  return (
-    <div className="bg-green-500">
-      <h1>Hello</h1>
-       
-    </div>
-  );
+  return <AppContainer>
+      <TopSection/>
+     </AppContainer>
 }
 
 export default App;
