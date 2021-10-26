@@ -50,7 +50,18 @@ const ExploreSectionWrapper = tw.div`
     xl:max-w-2xl
     2xl:max-w-5xl 
 `
-
+const Item = styled.div`
+    ${tw`
+        flex
+        flex-col
+    `}
+    img {
+        ${tw`
+            max-w-full
+            max-h-full 
+        `}
+    }
+`
 
 
 
