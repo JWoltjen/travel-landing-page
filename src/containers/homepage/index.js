@@ -17,16 +17,26 @@ const TopSectionContainer = styled.div`
 const LandingSection = styled.div`
     ${tw`
         w-full
-        h-screenflex
+        h-screen
+        flex
         flex-col
+    `}
 
-`}
-`
+    background-image: url(${BackgroundImage}), 
+        linear-gradient(to left, #005b9c, #b1d1b148); 
+    background-size: cover; 
+    background-position: bottom 10% left; 
+    backround-blend-mode: overlay; 
+`; 
 
 
 
 export function TopSection(){
-    return <TopSectionContainer>
-        <Navbar/>
+    return (
+    <TopSectionContainer>
+        <LandingSection>
+            <Navbar/>
+        </LandingSection>
     </TopSectionContainer>
+    )
 }
