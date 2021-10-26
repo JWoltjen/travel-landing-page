@@ -32,7 +32,26 @@ const SectionInfo = tw.p`
     text-center
     mt-4
     2xl:mt-2
+    max-w-lg
+    xl:max-w-3xl
 `; 
+
+const ExploreSectionWrapper = tw.div`
+    w-full
+    h-full
+    flex
+    flex-col
+    justify-center
+    items-center
+    mt-3
+    xl:mt-6
+    2xl:mt-10
+    max-w-sm
+    xl:max-w-2xl
+    2xl:max-w-5xl 
+`
+
+
 
 
 function ExploreSection() {
