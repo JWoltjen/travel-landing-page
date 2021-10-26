@@ -33,13 +33,13 @@ const InfoSection = styled.div`
     ${tw`
         absolute
         top[150px]
-        left-3
+        right-3
         lg:top[150px]
-        lg:right-10
-        lg:left-auto
-        2xl:right-60
+        lg:left-10
+        lg:right-auto
+        2xl:left-60
         2xl:top[240px]
-        2xl:left-auto
+        2xl:right-auto
     `};
 `;
 
@@ -60,7 +60,8 @@ const FloatingText = styled.h1`
 `;
 
 const OutlinedTextSvg = styled.svg`
-    overflow: overlay; 
+    overflow: overlay;
+    font: bold 100px Century "Archivo Narrow", Arial;
     ${`
         width[500px]
         height[100px]
@@ -99,7 +100,7 @@ const DescriptionText = styled.p`
     `}; 
 `; 
 
-const ViewMore = styled.button`
+const ViewMoreButton = styled.button`
     ${tw`
         absolute
         bottom-4
@@ -116,6 +117,20 @@ export function TopSection(){
     <TopSectionContainer>
         <LandingSection>
             <Navbar/>
+            <InfoSection>
+                <FloatingText>
+                    WORLD
+                </FloatingText>
+                <FloatingText style={{ display: "inline-flex"}}>
+                    OF
+                    <OutlinedTextSvg viewBox="0 0 530 100">
+                        <text>
+                            PARADISE
+                        </text>
+                    </OutlinedTextSvg>
+                </FloatingText>
+                <FloatingText>BONAIRE</FloatingText>
+            </InfoSection>
         </LandingSection>
     </TopSectionContainer>
     )
