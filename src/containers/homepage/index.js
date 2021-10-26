@@ -33,9 +33,7 @@ const InfoSection = styled.div`
     ${tw`
         absolute
         top[150px]
-        right-auto
-        left-10
-        lg:right-auto
+        lg:left-auto
         2xl:left-60
         2xl:top[240px]
         2xl:right-auto
@@ -44,12 +42,14 @@ const InfoSection = styled.div`
 
 const FloatingText = styled.h1`
     ${tw`
-        m-0
+        mx-8
         font-black
         text-white
         font-size[60px]
         font-size[25px]
         line-height[25px]
+        sm:font-size[90px]
+        sm: text-blue-500
         lg:font-size[125px]
         lg:line-height[90px]
         2xl:font-size[170px]
@@ -90,16 +90,19 @@ const OutlinedTextSvg = styled.svg`
 
 const DescriptionText = styled.p`
     ${tw`
+        mx-8
         text-xl
         text-white
         text-opacity-80
-        mt-10
-        max-w-md
+        min-w-min
+        max-w-2xl
+        sm: w-8/12
+        sm: text-base
         sm: mt-40
+        sm: text-left
         md: mt-28
         lg: mt-20
-        2xl:max-w-xl
-        overflow-auto
+        xl: mt-10
     `}; 
 `; 
 
@@ -134,7 +137,8 @@ export function TopSection(){
                 </FloatingText>
                 <FloatingText>BONAIRE</FloatingText>
                 <DescriptionText>
-                    Come explore a diver's paradise nestled in the Caribbean Sea.
+                    Come explore a diver's paradise nestled 
+                    in the Caribbean Sea.
                     Enjoy three vacation packages at competitive prices designed to 
                     maximize the treasures you wil discover on this tropical island
                     adventure.
