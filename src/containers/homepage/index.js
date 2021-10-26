@@ -54,8 +54,41 @@ const FloatingText = styled.h1`
         lg:font-size[125px]
         lg:line-height[90px]
         2xl:font-size[170px]
+        font-family["Archivo Narrow"]
+        flex 
+        items-center
     `}
 `
+
+const OutlinedTextSvg = styled.svg`
+    font: bold 100px Century "Archivo Narrow", Arial; 
+    overflow: overlay; 
+    ${`
+        width[500px]
+        height[100px]
+        lg:width[550px]
+        lg:height[110px]
+        2xl:width[550px]
+        2xl:height[110px]
+        flex 
+    `}
+
+    text {
+        max-height: 100%; 
+        flex: 1; 
+        fill: none; 
+        stroke: white; 
+        stroke-width: 2px; 
+        stroke-linejoin: round; 
+        z-index: 99; 
+        ${tw`
+            2xl:transform[translateY(113px)]
+            lg:transform[translateY(97px)]
+            transform[translateY(71px)]
+        `}
+        text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.5); 
+    }
+`; 
 
 
 export function TopSection(){
