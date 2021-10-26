@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import {Navbar} from '../../components/Navbar'
 import BackgroundImage from '../../images/bonaire-shoreline-of.jpg'
-
+import MobileBackgroundImage from '../../images/reversed.jpg'
 const TopSectionContainer = styled.div`
     ${tw`
         w-full
@@ -15,15 +15,18 @@ const TopSectionContainer = styled.div`
 `; 
 
 const LandingSection = styled.div`
+    background-image: url(${BackgroundImage}), 
+    linear-gradient(to right, #005b9c, #b1d1b148); 
     ${tw`
         w-full
         h-screen
         flex
         flex-col
     `}; 
-
-    background-image: url(${BackgroundImage}), 
-        linear-gradient(to right, #005b9c, #b1d1b148); 
+    @media screen and (max-width: 640px){
+        background-image: url(${MobileBackgroundImage})
+    }
+   
     background-size: cover; 
     background-position: bottom 10% left; 
     backround-blend-mode: overlay; 
@@ -32,11 +35,9 @@ const LandingSection = styled.div`
 const InfoSection = styled.div`
     ${tw`
         absolute
-        top[150px]
-        right-3
-        lg:top[150px]
-        lg:left-10
-        lg:right-auto
+        top[100px]
+        sm:p-0
+        lg:left-auto
         2xl:left-60
         2xl:top[240px]
         2xl:right-auto
@@ -45,12 +46,11 @@ const InfoSection = styled.div`
 
 const FloatingText = styled.h1`
     ${tw`
-        m-0
+        mx-8
         font-black
         text-white
-        font-size[60px]
         font-size[25px]
-        line-height[25px]
+        sm:line-height[1px]
         lg:font-size[125px]
         lg:line-height[90px]
         2xl:font-size[170px]
@@ -63,8 +63,11 @@ const FloatingText = styled.h1`
 const OutlinedTextSvg = styled.svg`
     font: bold 100px Century "Archivo Narrow", Arial;
     ${tw`
-        width[500px]
-        height[100px]
+        ml-3
+        mb-3
+        p-0
+        items-center
+        height[80px]
         lg:width[550px]
         lg:height[110px]
         2xl:width[550px]
@@ -77,7 +80,7 @@ const OutlinedTextSvg = styled.svg`
         flex: 1; 
         fill: none; 
         stroke: white; 
-        stroke-width: 2px; 
+        stroke-width: 1px; 
         stroke-linejoin: round; 
         z-index: 99; 
         ${tw`
@@ -91,12 +94,20 @@ const OutlinedTextSvg = styled.svg`
 
 const DescriptionText = styled.p`
     ${tw`
-        text-lg
+        mx-8
+        text-xl
         text-white
-        text-opacity-80
-        mt-10
-        max-w-lg
-        2xl:max-w-xl
+        font-bold
+        items-center
+        text-opacity-100
+        min-w-min
+        max-w-2xl
+        sm: w-8/12
+        sm: text-base
+        sm: text-left
+        sm: py-40
+        md: mt-28
+        xl: mt-10
     `}; 
 `; 
 
@@ -131,7 +142,8 @@ export function TopSection(){
                 </FloatingText>
                 <FloatingText>BONAIRE</FloatingText>
                 <DescriptionText>
-                    Come explore a diver's paradise nestled in the Caribbean Sea.
+                    Come explore a diver's paradise nestled 
+                    in the Caribbean Sea.
                     Enjoy three vacation packages at competitive prices designed to 
                     maximize the treasures you wil discover on this tropical island
                     adventure.
