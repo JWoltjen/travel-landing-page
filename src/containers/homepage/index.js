@@ -29,6 +29,33 @@ const LandingSection = styled.div`
     backround-blend-mode: overlay; 
 `; 
 
+const InfoSection = styled.div`
+    ${tw`
+        absolute
+        top[150px]
+        left-3
+        lg:top[150px]
+        lg:right-10
+        lg:left-auto
+        2xl:right-60
+        2xl:top[240px]
+        2xl:left-auto
+    `}
+`
+
+const FloatingText = styled.h1`
+    ${tw`
+        m-0
+        font-black
+        text-white
+        font-size[60px]
+        font-size[25px]
+        line-height[25px]
+        lg:font-size[125px]
+        lg:line-height[90px]
+        2xl:font-size[170px]
+    `}
+`
 
 
 export function TopSection(){
