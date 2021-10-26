@@ -20,7 +20,7 @@ const LandingSection = styled.div`
         h-screen
         flex
         flex-col
-    `}
+    `}; 
 
     background-image: url(${BackgroundImage}), 
         linear-gradient(to right, #005b9c, #b1d1b148); 
@@ -40,8 +40,8 @@ const InfoSection = styled.div`
         2xl:right-60
         2xl:top[240px]
         2xl:left-auto
-    `}
-`
+    `};
+`;
 
 const FloatingText = styled.h1`
     ${tw`
@@ -54,14 +54,12 @@ const FloatingText = styled.h1`
         lg:font-size[125px]
         lg:line-height[90px]
         2xl:font-size[170px]
-        font-family["Archivo Narrow"]
         flex 
         items-center
-    `}
-`
+    `};
+`;
 
 const OutlinedTextSvg = styled.svg`
-    font: bold 100px Century "Archivo Narrow", Arial; 
     overflow: overlay; 
     ${`
         width[500px]
@@ -71,7 +69,7 @@ const OutlinedTextSvg = styled.svg`
         2xl:width[550px]
         2xl:height[110px]
         flex 
-    `}
+    `};
 
     text {
         max-height: 100%; 
@@ -87,9 +85,31 @@ const OutlinedTextSvg = styled.svg`
             transform[translateY(71px)]
         `}
         text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.5); 
-    }
+    };
 `; 
 
+const DescriptionText = styled.p`
+    ${tw`
+        text-lg
+        text-white
+        text-opacity-80
+        mt-10
+        max-w-lg
+        2xl:max-w-xl
+    `}; 
+`; 
+
+const ViewMore = styled.button`
+    ${tw`
+        absolute
+        bottom-4
+        text-white 
+        text-4xl 
+        transition-colors
+        duration-200 
+        hover:text-green-400
+    `};
+`; 
 
 export function TopSection(){
     return (
