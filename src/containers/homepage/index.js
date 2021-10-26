@@ -33,9 +33,8 @@ const InfoSection = styled.div`
     ${tw`
         absolute
         top[150px]
-        right-3
-        lg:top[150px]
-        lg:left-10
+        right-auto
+        left-10
         lg:right-auto
         2xl:left-60
         2xl:top[240px]
@@ -95,8 +94,10 @@ const DescriptionText = styled.p`
         text-white
         text-opacity-80
         mt-10
-        max-w-lg
+        max-w-md
+        sm: mt-40
         2xl:max-w-xl
+        overflow-auto
     `}; 
 `; 
 
