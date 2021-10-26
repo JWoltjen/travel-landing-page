@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import {Navbar} from '../../components/Navbar'
 import BackgroundImage from '../../images/bonaire-shoreline-of.jpg'
-
+import MobileBackgroundImage from '../../images/reversed.jpg'
 const TopSectionContainer = styled.div`
     ${tw`
         w-full
@@ -15,15 +15,18 @@ const TopSectionContainer = styled.div`
 `; 
 
 const LandingSection = styled.div`
+    background-image: url(${BackgroundImage}), 
+    linear-gradient(to right, #005b9c, #b1d1b148); 
     ${tw`
         w-full
         h-screen
         flex
         flex-col
     `}; 
-
-    background-image: url(${BackgroundImage}), 
-        linear-gradient(to right, #005b9c, #b1d1b148); 
+    @media screen and (max-width: 640px){
+        background-image: url(${MobileBackgroundImage})
+    }
+   
     background-size: cover; 
     background-position: bottom 10% left; 
     backround-blend-mode: overlay; 
@@ -32,7 +35,8 @@ const LandingSection = styled.div`
 const InfoSection = styled.div`
     ${tw`
         absolute
-        top[150px]
+        top[100px]
+        sm:p-0
         lg:left-auto
         2xl:left-60
         2xl:top[240px]
@@ -45,11 +49,8 @@ const FloatingText = styled.h1`
         mx-8
         font-black
         text-white
-        font-size[60px]
         font-size[25px]
-        line-height[25px]
-        sm:font-size[90px]
-        sm: text-blue-500
+        sm:line-height[1px]
         lg:font-size[125px]
         lg:line-height[90px]
         2xl:font-size[170px]
@@ -62,8 +63,11 @@ const FloatingText = styled.h1`
 const OutlinedTextSvg = styled.svg`
     font: bold 100px Century "Archivo Narrow", Arial;
     ${tw`
-        width[500px]
-        height[100px]
+        ml-3
+        mb-3
+        p-0
+        items-center
+        height[80px]
         lg:width[550px]
         lg:height[110px]
         2xl:width[550px]
@@ -76,7 +80,7 @@ const OutlinedTextSvg = styled.svg`
         flex: 1; 
         fill: none; 
         stroke: white; 
-        stroke-width: 2px; 
+        stroke-width: 1px; 
         stroke-linejoin: round; 
         z-index: 99; 
         ${tw`
@@ -93,15 +97,16 @@ const DescriptionText = styled.p`
         mx-8
         text-xl
         text-white
-        text-opacity-80
+        font-bold
+        items-center
+        text-opacity-100
         min-w-min
         max-w-2xl
         sm: w-8/12
         sm: text-base
-        sm: mt-40
         sm: text-left
+        sm: py-40
         md: mt-28
-        lg: mt-20
         xl: mt-10
     `}; 
 `; 
