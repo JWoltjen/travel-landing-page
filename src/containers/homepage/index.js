@@ -54,15 +54,15 @@ const FloatingText = styled.h1`
         lg:font-size[125px]
         lg:line-height[90px]
         2xl:font-size[170px]
+        font-family["Archivo Narrow"]
         flex 
         items-center
     `};
 `;
 
 const OutlinedTextSvg = styled.svg`
-    overflow: overlay;
     font: bold 100px Century "Archivo Narrow", Arial;
-    ${`
+    ${tw`
         width[500px]
         height[100px]
         lg:width[550px]
@@ -71,7 +71,7 @@ const OutlinedTextSvg = styled.svg`
         2xl:height[110px]
         flex 
     `};
-
+    overflow: overlay;
     text {
         max-height: 100%; 
         flex: 1; 
@@ -104,6 +104,8 @@ const ViewMoreButton = styled.button`
     ${tw`
         absolute
         bottom-4
+        left-1/2
+        -translate-x-1/2
         text-white 
         text-4xl 
         transition-colors
@@ -124,12 +126,16 @@ export function TopSection(){
                 <FloatingText style={{ display: "inline-flex"}}>
                     OF
                     <OutlinedTextSvg viewBox="0 0 530 100">
-                        <text>
-                            PARADISE
-                        </text>
+                        <text>WONDER</text>
                     </OutlinedTextSvg>
                 </FloatingText>
                 <FloatingText>BONAIRE</FloatingText>
+                <DescriptionText>
+                    Come explore a diver's paradise nestled in the Caribbean Sea.
+                    Enjoy three vacation packages at competitive prices designed to 
+                    maximize the treasures you wil discover on this tropical island
+                    adventure.
+                </DescriptionText>
             </InfoSection>
         </LandingSection>
     </TopSectionContainer>
