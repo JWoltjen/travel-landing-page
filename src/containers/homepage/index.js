@@ -23,7 +23,7 @@ const LandingSection = styled.div`
     `}
 
     background-image: url(${BackgroundImage}), 
-        linear-gradient(to left, #005b9c, #b1d1b148); 
+        linear-gradient(to right, #005b9c, #b1d1b148); 
     background-size: cover; 
     background-position: bottom 10% left; 
     backround-blend-mode: overlay; 
