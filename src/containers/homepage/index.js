@@ -90,12 +90,14 @@ const OutlinedTextSvg = styled.svg`
 
 const DescriptionText = styled.p`
     ${tw`
-        text-lg
+        text-xl
         text-white
         text-opacity-80
         mt-10
         max-w-md
         sm: mt-40
+        md: mt-28
+        lg: mt-20
         2xl:max-w-xl
         overflow-auto
     `}; 
