@@ -1,7 +1,9 @@
 import React from 'react'
+import {Element} from 'react-scroll'
+import tw from 'twin.macro'
+import styled from 'styled-components'
 
-
-const ExploreSectionContainer = tw`
+const ExploreSectionContainer = tw(Element)`
     w-full
     h-screen
     flex
@@ -61,16 +63,32 @@ const Item = styled.div`
             max-h-full 
         `}
     }
-`
+`; 
+
+const Description = tw.p`
+    text-gray-300
+    text-center
+    bg-black
+    bottom-10
+    left-1/2
+    pl-4
+    pr-4
+    pt-2
+    pb-2
+    rounded-2xl
+    opacity-80
+    transform[translateX(-50%)]
+    absolute
+`; 
 
 
 
 function ExploreSection() {
     return (
-        <div>
-            
-        </div>
+        <ExploreSectionContainer name="Explore">
+            <Title>Explore Travel Places</Title>
+        </ExploreSectionContainer>
     )
 }
 
-export default ExporeSection
+export default ExploreSection
