@@ -2,6 +2,11 @@ import React from 'react'
 import {Element} from 'react-scroll'
 import tw from 'twin.macro'
 import styled from 'styled-components'
+import { Carousel } from 'react-responsive-carousel'
+import lacBay from '../../images/lacbay.jpg'
+import kralendijk from '../../images/downtown-kralendijk-1-xl.jpg'
+import diveBoats from '../../images/diveBoats.jpg'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ExploreSectionContainer = tw(Element)`
     w-full
@@ -18,6 +23,7 @@ const ExploreSectionContainer = tw(Element)`
 
 const Title = tw.h1`
     text-2xl
+    lg:mt-0
     xl:text-3xl
     2xl:text-5xl
     2xl:mt-6
@@ -36,6 +42,10 @@ const SectionInfo = tw.p`
     2xl:mt-2
     max-w-lg
     xl:max-w-3xl
+    pl-4
+    pr-4
+    lg:pl-2
+    lg:pr-2
 `; 
 
 const ExploreSectionWrapper = tw.div`
@@ -50,7 +60,7 @@ const ExploreSectionWrapper = tw.div`
     2xl:mt-10
     max-w-sm
     xl:max-w-2xl
-    2xl:max-w-5xl 
+    2xl:max-w-4xl 
 `
 const Item = styled.div`
     ${tw`
@@ -87,6 +97,26 @@ function ExploreSection() {
     return (
         <ExploreSectionContainer name="Explore">
             <Title>Explore Travel Places</Title>
+            <SectionInfo>
+                View our tour package and find out more about the places we will visit together on this journey to
+                beautiful Bonaire, a desert island full of untold treasure and adventure.
+            </SectionInfo>
+            <ExploreSectionWrapper>
+                <Carousel dynamicHeight={false}>
+                    <Item>
+                        <img src={lacBay}/>
+                        <Description>Lac Bay</Description>
+                    </Item>
+                    <Item>
+                        <img src={kralendijk}/>
+                        <Description>Kralendijk</Description>
+                    </Item>
+                    <Item>
+                        <img src={diveBoats}/>
+                        <Description>Boat Dives</Description>
+                    </Item>
+                </Carousel>
+            </ExploreSectionWrapper>
         </ExploreSectionContainer>
     )
 }
