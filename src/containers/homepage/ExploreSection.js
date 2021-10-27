@@ -10,6 +10,8 @@ import hiddenBeach from '../../images/hiddenBeach.jpg'
 import luxuryVillas from '../../images/luxuryVillas.jpg'
 import scenicVista from '../../images/scenicVista.jpg'
 import snorkel from '../../images/snorkel.jpg'
+import scuba from '../../images/scuba.jpg'
+import windsurfing from '../../images/windsurfing.jpg'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -135,6 +137,14 @@ function ExploreSection() {
                     <Item>
                         <img src={snorkel}/>
                         <Description>Snorkel in crystal clear water</Description>
+                    </Item>
+                    <Item>
+                        <img src={scuba}/>
+                        <Description>Fall in love with our world-class diving</Description>
+                    </Item>
+                    <Item>
+                        <img src={windsurfing}/>
+                        <Description>Experience windsurfing at famous Lac Bay</Description>
                     </Item>
                 </Carousel>
             </ExploreSectionWrapper>
