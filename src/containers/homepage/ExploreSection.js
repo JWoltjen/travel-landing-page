@@ -12,6 +12,8 @@ import scenicVista from '../../images/scenicVista.jpg'
 import snorkel from '../../images/snorkel.jpg'
 import scuba from '../../images/scuba.jpg'
 import windsurfing from '../../images/windsurfing.jpg'
+import donkey from '../../images/donkey.jpg'
+import resortDining from '../../images/seasideDining.jpg'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -145,6 +147,14 @@ function ExploreSection() {
                     <Item>
                         <img src={windsurfing}/>
                         <Description>Experience windsurfing at famous Lac Bay</Description>
+                    </Item>
+                    <Item>
+                        <img src={donkey}/>
+                        <Description>Open air adventure awaits within our rugged interior</Description>
+                    </Item>
+                    <Item>
+                        <img src={resortDining}/>
+                        <Description>Open air adventure awaits within our rugged interior</Description>
                     </Item>
                 </Carousel>
             </ExploreSectionWrapper>
