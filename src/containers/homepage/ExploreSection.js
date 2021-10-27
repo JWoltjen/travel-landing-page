@@ -6,6 +6,10 @@ import { Carousel } from 'react-responsive-carousel'
 import lacBay from '../../images/lacbay.jpg'
 import kralendijk from '../../images/downtown-kralendijk-1-xl.jpg'
 import diveBoats from '../../images/diveBoats.jpg'
+import hiddenBeach from '../../images/hiddenBeach.jpg'
+import luxuryVillas from '../../images/luxuryVillas.jpg'
+import scenicVista from '../../images/scenicVista.jpg'
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ExploreSectionContainer = tw(Element)`
@@ -114,6 +118,18 @@ function ExploreSection() {
                     <Item>
                         <img src={diveBoats}/>
                         <Description>Boat Dives</Description>
+                    </Item>
+                    <Item>
+                        <img src={hiddenBeach}/>
+                        <Description>Hidden Beach</Description>
+                    </Item>
+                    <Item>
+                        <img src={luxuryVillas}/>
+                        <Description>Luxury Villas</Description>
+                    </Item>
+                    <Item>
+                        <img src={scenicVista}/>
+                        <Description>Salt Pier</Description>
                     </Item>
                 </Carousel>
             </ExploreSectionWrapper>
