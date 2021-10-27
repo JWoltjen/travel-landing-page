@@ -9,6 +9,7 @@ import diveBoats from '../../images/diveBoats.jpg'
 import hiddenBeach from '../../images/hiddenBeach.jpg'
 import luxuryVillas from '../../images/luxuryVillas.jpg'
 import scenicVista from '../../images/scenicVista.jpg'
+import snorkel from '../../images/snorkel.jpg'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -130,6 +131,10 @@ function ExploreSection() {
                     <Item>
                         <img src={scenicVista}/>
                         <Description>Salt Pier</Description>
+                    </Item>
+                    <Item>
+                        <img src={snorkel}/>
+                        <Description>Snorkel in crystal clear water</Description>
                     </Item>
                 </Carousel>
             </ExploreSectionWrapper>
